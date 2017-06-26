@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="todo">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo</title>
+
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+<h1 class="head">ToDo</h1>
+<p>This app allows you to make a list of all of your ToDo's and lets you help with your routine work</p>
+<p>More features to be added soon, Keep using till then!</p>
+<div class="container" ng-controller="DisplayList">
+    <p class="counter"><b>{{left()}}</b> remaining of <b>{{lists.length}}</b></p>
+
+    <br>
+    <form class="container1">
+        <input type="text" placeholder="Enter Task here" ng-model="addedTask" class="text"/>
+
+        <button type="button" class="addbutton" ng-click="add()">Add Task</button>
+
+        <button ng-click="remove()" type="button" class="removebutton">Remove completed tasks</button>
+    </form>
+
+
+    <br>
+    <ul ng-repeat="list in lists track by $index">
+        <input type="checkbox" ng-model="list.done" class="checkbox">
+        <span class="done-{{list.done}}">{{list.text}}</span>
+        <hr style="opacity: 0.2">
+    </ul>
+
+    <br>
+
+
+
+</div>
+
+<footer>
+    Made with <i class="fa fa-heart" style="color: red"></i> by Mishal
+</footer>
+</body>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-local-storage/0.6.0/angular-local-storage.min.js"></script>
+    <script src="Controller/main.js"></script>
+</html>
