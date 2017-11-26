@@ -45,8 +45,11 @@ footer{
     font-size: 15px;
     font-weight: bold;
 }
-
-
+textarea{
+    max-width: 100%;
+    min-height: 50%;
+    min-width: 40%;
+}
 .head{
     background-color: darkorange;
     color: white;

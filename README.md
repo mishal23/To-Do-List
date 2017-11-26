@@ -3,7 +3,7 @@ An AngularJS app keeping track of all To-Do's with awesome features
 
 ### Features to Implement
 
-- User can add Title and the To-Do's under that title.
+- ~User can add Title and the To-Do's under that title.~
 - ~User can remove the done items.~
 - Try to link with Google Firebase for users to login and store their ToDos.
 
